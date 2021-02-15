@@ -1,5 +1,6 @@
 package people;
 
+import attractions.Playground;
 import org.junit.Before;
 import org.junit.Test;
 
@@ -8,6 +9,7 @@ import static org.junit.Assert.assertEquals;
 public class VisitorTest {
 
     Visitor visitor;
+    Playground playground;
 
     @Before
     public void before(){
