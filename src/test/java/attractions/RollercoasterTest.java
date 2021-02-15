@@ -6,7 +6,8 @@ import people.Visitor;
 
 import static org.junit.Assert.*;
 
-public class RollercoasterTest<visitor1> {
+public class RollercoasterTest {
+
 
     RollerCoaster rollerCoaster;
     Visitor visitor1;
@@ -45,6 +46,18 @@ public class RollercoasterTest<visitor1> {
     public void visitorNotAllowedIn(){
         assertFalse(rollerCoaster.isAllowed(visitor1));
     }
+
+    @Test
+    public void hasPrice(){
+        assertEquals(8.40, rollerCoaster.defaultPrice(), 0.01);
+    }
+
+    @Test
+    public void hasDoublePrice(){
+        assertEquals(16.80, rollerCoaster.priceFor(visitor1),0.0);
+    }
+
+
 
 
 
